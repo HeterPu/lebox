@@ -69,10 +69,40 @@
         <activity android:name=".LeBoxProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
-
+        <activity android:name=".find.ui.SelectImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".find.ui.ArticleDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".find.ui.KOLActivitiy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".find.ui.ShowPicVPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".find.ui.GameDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".circle.ui.CircleListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".circle.ui.CircleDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".circle.ui.ArticleDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".circle.ui.CreateTieZiActivtiy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".circle.ui.CreateCircleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".SplashActivity"
-            android:theme="@style/AppTheme">
-            <intent-filter>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -109,6 +139,22 @@
                 android:resource="@xml/leto_file_path" />
         </provider>
 
+        <!-- toutiao sdk config -->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities="${applicationId}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+            
         <!-- 渠道自带的微信分享集成 -->
         <activity
             android:name="${applicationId}.wxapi.WXEntryActivity"
@@ -119,7 +165,7 @@
         <!-- 以下数据请自行设置 -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="5b03dedda40fa32b7f00003c" />
+            android:value="5da289570cafb2d9a3000224" />
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="kx100_mgc_demo" />
